@@ -1,16 +1,16 @@
 module GithubServices
-  class UserRepositories
+  class UserRepository
     def list(user)
       base_url = "https://api.github.com/users/"
       suffix_url = "/repos"
 
       data = begin
         RestClient.get(base_url + user + suffix_url)
-      rescue => e
-        e.response.body
+      rescue
+        return nil
       end
 
-      JSON.parse(data)
+      repo_json = JSON.parse(data)
     end
   end
 end

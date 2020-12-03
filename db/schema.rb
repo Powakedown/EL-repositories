@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2020_12_03_140459) do
 
   create_table "repositories", force: :cascade do |t|
-    t.integer "stars"
-    t.string "description"
-    t.string "url"
-    t.string "name"
+    t.integer "stars", default: 0, null: false
+    t.string "description", default: "no description added", null: false
+    t.string "url", default: "#", null: false
+    t.string "name", default: "Repository name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
