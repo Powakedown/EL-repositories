@@ -1,0 +1,40 @@
+.card-generic {
+  width: 100%;
+  position: relative;
+  box-shadow: 2px 5px 6px 5px rgba(0, 0, 0, 0.02), 5px 5px 10px -2px rgba(0, 0, 0, 0.1);
+  height: 30px;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  transition: 0.2s;
+  background-color: white;
+  &:hover {
+    transform: scale(1.02);
+  }
+  .card-generic-details {
+    display: none;
+  }
+  &.card-generic-opened {
+    min-height: 150px;
+    .card-generic-details {
+      display: block;
+    }
+  }
+  h2 {
+    margin-top: 0px;
+  }
+  .card-generic-stars{
+    width: 60px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+      margin-left: 0.5rem;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
