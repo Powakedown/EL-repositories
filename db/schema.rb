@@ -13,10 +13,12 @@
 ActiveRecord::Schema.define(version: 2020_12_03_140459) do
 
   create_table "repositories", force: :cascade do |t|
-    t.integer "stars", default: 0, null: false
-    t.string "description", default: "no description added", null: false
-    t.string "url", default: "#", null: false
-    t.string "name", default: "Repository name", null: false
+    t.integer "stargazers_count"
+    t.string "description"
+    t.string "html_url"
+    t.string "name"
+    t.integer "remote_id"
+    t.datetime "remote_updated_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

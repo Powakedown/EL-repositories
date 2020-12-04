@@ -1,8 +1,8 @@
 <div class="repositories-container">
   <h1>Repositories :</h1>
-  <% (1..10).to_a.each do |repo| %>
-    <%= link_to "#" do %>
-      <%= render "shared/components/cards/card_generic", repo: repo %>
+  <% @repositories.each do |repo| %>
+    <%= link_to repository_path(repo), remote: true %>
+      <%= render "shared/components/cards/card_generic", resource: repo %>
     <% end %>
   <% end %>
 </div>
