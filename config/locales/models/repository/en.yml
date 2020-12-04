@@ -2,3 +2,5 @@ en:
   repository:
     description:
       blank: "no description"
+    remote_updated_at:
+      label: "Last update"

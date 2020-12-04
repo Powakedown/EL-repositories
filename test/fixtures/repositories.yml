@@ -4,10 +4,10 @@ one:
   stars: 1
   description: MyString
   url: MyString
-  name: MyString
+  name: Repository
 
 two:
   stars: 1
   description: MyString
   url: MyString
-  name: MyString
+  name: Repositories

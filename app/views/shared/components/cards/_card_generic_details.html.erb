@@ -1,0 +1,4 @@
+<div class="card-generic-details">
+  <p><%= resource.description || t("#{resource.class_to_s}.description.blank") %></p>
+  <p><%= t('repository.remote_updated_at.label') %> : <%= resource.remote_updated_at.to_time.humanize %></p>
+</div>

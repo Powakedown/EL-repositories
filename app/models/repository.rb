@@ -33,6 +33,7 @@ class Repository < ApplicationRecord
   def synchronize(remote_repo)
     return if up_to_date?(remote_repo['updated_at'])
 
+    self.remote_updated_at = remote_repo["updated_at"]
     curated_remote_repo = remote_repo.extract! *Repository.attributes_to_synchronize
     update(curated_remote_repo)
   end

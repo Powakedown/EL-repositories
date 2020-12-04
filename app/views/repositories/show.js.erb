@@ -1,13 +1,13 @@
 document.querySelectorAll('.card-generic').forEach(card => {
   card.classList.remove("card-generic-opened");
   const detailLink = card.querySelector('.card-generic-details-link')
-  if(detailLink) {
-    detailLink.style.display = "none";
-  }
+  if(detailLink) { detailLink.style.display = "none"; }
 });
-document.querySelector(`#repository-<%= @repository.id %>`)
-        .classList.add('card-generic-opened');
-document.querySelector('#repository-<%= @repository.id %> .card-generic-details')
-        .innerText = "<%= @repository.description || I18n.t('repository.description.blank') %>";
-document.querySelector('#repository-<%= @repository.id %> .card-generic-details')
-        .insertAdjacentHTML('afterend', '<%= j render "shared/components/cards/card_generic_details_link", resource: @repository %>');
+
+repositoryCard = document.querySelector(`#repository-<%= @repository.id %>`);
+
+if(repositoryCard){
+  repositoryCard.classList.add('card-generic-opened');
+  repositoryCard.innerHTML += '<%= j render "shared/components/cards/card_generic_details", resource: @repository %>';
+  repositoryCard.innerHTML += '<%= j render "shared/components/cards/card_generic_details_link", resource: @repository %>';
+}
