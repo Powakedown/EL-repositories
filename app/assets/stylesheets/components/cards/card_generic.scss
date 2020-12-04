@@ -13,6 +13,17 @@
     margin-bottom: 0;
     margin-top: 0;
   }
+  &.card-generic-opened {
+    min-height: 150px;
+    .card-generic-top {
+      color: #11627D;
+    }
+    .card-generic-details {
+      display: block;
+      margin-top: 1rem;
+      color: #484848;
+    }
+  }
   .card-generic-top {
     display: flex;
     justify-content: space-between;
@@ -25,14 +36,6 @@
   }
   .card-generic-details {
     display: none;
-  }
-  &.card-generic-opened {
-    min-height: 150px;
-    .card-generic-details {
-      display: block;
-      margin-top: 1rem;
-      color: #484848;
-    }
   }
   .card-generic-details-link {
     position: absolute;

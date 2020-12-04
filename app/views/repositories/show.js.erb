@@ -1,3 +1,10 @@
+document.querySelectorAll('.card-generic').forEach(card => {
+  card.classList.remove("card-generic-opened");
+  const detailLink = card.querySelector('.card-generic-details-link')
+  if(detailLink) {
+    detailLink.style.display = "none";
+  }
+});
 document.querySelector(`#repository-<%= @repository.id %>`)
         .classList.add('card-generic-opened');
 document.querySelector('#repository-<%= @repository.id %> .card-generic-details')
