@@ -5,6 +5,10 @@ class Repository < ApplicationRecord
     %w[name description stargazers_count html_url]
   end
 
+  def decorated(view_context)
+    RepositoryDecorator.new(self, view_context)
+  end
+
   def self.remote
     GithubServices::UserRepository.new.list('edulib-france')
   end

@@ -8,6 +8,11 @@
   margin-bottom: 1.5rem;
   transition: 0.2s;
   background-color: white;
+  transition: 1s;
+  h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
   .card-generic-top {
     display: flex;
     justify-content: space-between;
@@ -25,11 +30,20 @@
     min-height: 150px;
     .card-generic-details {
       display: block;
+      margin-top: 1rem;
+      color: #484848;
     }
   }
-  h3 {
-    margin-bottom: 0;
-    margin-top: 0;
+  .card-generic-details-link {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
   }
   .card-generic-stars{
     width: 60px;

@@ -1,0 +1,6 @@
+document.querySelector(`#repository-<%= @repository.id %>`)
+        .classList.add('card-generic-opened');
+document.querySelector('#repository-<%= @repository.id %> .card-generic-details')
+        .innerText = "<%= @repository.description || I18n.t('repository.description.blank') %>";
+document.querySelector('#repository-<%= @repository.id %> .card-generic-details')
+        .insertAdjacentHTML('afterend', '<%= j render "shared/components/cards/card_generic_details_link", resource: @repository %>');

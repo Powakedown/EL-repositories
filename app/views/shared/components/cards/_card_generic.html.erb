@@ -1,10 +1,12 @@
-<article class="card-generic <%= "card-generic-opened" if resource == 1 %>">
-  <div class="card-generic-top">
-    <h3><%= resource.name %></h3>
-    <div class="card-generic-stars">
-      <%= resource.stargazers_count %> <%= image_tag "pictos/star-solid.svg", class:"#{"active" if resource.starred? }" %>
+<article class="card-generic <%= "card-generic-opened" if resource == 1 %>" id="<%= resource.decorated(self).css_id %>">
+  <%= link_to repository_path(resource), remote: true do %>
+    <div class="card-generic-top">
+      <h3><%= resource.name %></h3>
+      <div class="card-generic-stars">
+        <%= resource.stargazers_count %> <%= image_tag "pictos/star-solid.svg", class:"#{"active" if resource.starred? }" %>
+      </div>
     </div>
-  </div>
-  <div class="card-generic-details" id="card-generic-details-<%= resource.id %>">
+  <% end %>
+  <div class="card-generic-details">
   </div>
 </article>
