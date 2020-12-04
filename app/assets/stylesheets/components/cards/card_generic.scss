@@ -13,6 +13,10 @@
     margin-bottom: 0;
     margin-top: 0;
   }
+  .card-generic-details-container {
+    position: relative;
+    height: calc(100% - 45px);
+  }
   &.card-generic-opened {
     min-height: 150px;
     .card-generic-top {
@@ -20,7 +24,7 @@
     }
     .card-generic-details {
       width: calc(100% - 40px);
-      height: calc(100% - 45px);
+      height: 100%;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -44,8 +48,8 @@
   }
   .card-generic-details-link {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0;
+    right: 0;
     width: 30px;
     height: 30px;
     opacity: 0.5;

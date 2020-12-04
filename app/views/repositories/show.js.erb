@@ -1,5 +1,6 @@
 document.querySelectorAll('.card-generic').forEach(card => {
   card.classList.remove("card-generic-opened");
+  card.querySelector('.card-generic-details-container').innerHTML = "";
   const detailLink = card.querySelector('.card-generic-details-link')
   if(detailLink) { detailLink.style.display = "none"; }
 });
@@ -8,6 +9,6 @@ repositoryCard = document.querySelector(`#repository-<%= @repository.id %>`);
 
 if(repositoryCard){
   repositoryCard.classList.add('card-generic-opened');
-  repositoryCard.innerHTML += '<%= j render "shared/components/cards/card_generic_details", resource: @repository %>';
-  repositoryCard.innerHTML += '<%= j render "shared/components/cards/card_generic_details_link", resource: @repository %>';
+  repositoryCard.querySelector('.card-generic-details-container').innerHTML += '<%= j render "shared/components/cards/card_generic_details", resource: @repository %>';
+  repositoryCard.querySelector('.card-generic-details-container').innerHTML += '<%= j render "shared/components/cards/card_generic_details_link", resource: @repository %>';
 }
